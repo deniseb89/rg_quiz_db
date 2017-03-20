@@ -1,0 +1,284 @@
+// QUESTION_TAG
+
+// sections
+section#clients {
+  height: 415px;
+  background: image-url("clients.jpg");
+  background-size: cover;
+  background-position: center center;
+
+  h1, h3 {
+    color: white;
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 0.7;
+  }
+
+  .box {
+    background: rgba(0,0,0,0.45);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 85px 40px 0 40px;
+    p { margin-top: 10px; }
+    h3 { margin: 14px auto; }
+    @media (min-width: #{$screen-sm}) {
+      background: transparent;
+      margin: 0;
+      width: 420px;
+    }
+  }
+
+  @media (min-width: #{$screen-xlg}) {
+    height: 600px;
+  }
+}
+
+section#time {
+  background-color: $marketingBackgroundLightGray;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  img {
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+  .box {
+    text-align: center;
+    h1 { line-height: 0.4; }
+    h2 { margin-top: 15px; }
+    p { margin-bottom: 26px; }
+    @media (min-width: #{$screen-sm}) {
+      text-align: left;
+      img { margin-bottom: 0; }
+    }
+    @media (min-width: #{$screen-lg}) {
+      width: 340px;
+    }
+  }
+  @media (min-width: #{$screen-sm}) {
+    padding-top: 80px;
+  }
+}
+
+section#brand {
+  padding-top: 40px;
+  padding-bottom: 0;
+  h1 { line-height: 1; }
+  h1, h2, p { text-align: center;}
+  h2 { margin: 0; }
+  p {
+    padding: 0 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  @media(min-width: #{$screen-sm}) {
+    margin: 0 auto;
+    width: 700px;
+    padding-bottom: 90px;
+  }
+
+  @media(min-width: #{$screen-lg}) {
+    width: 1028px;
+  }
+
+  .peekaboo {
+    cursor: pointer;
+    overflow: hidden;
+    background-color: $marketingBackgroundLightGray;
+
+    @media(min-width: #{$screen-sm}) {
+      padding: 85px 0 0 0;
+      border: 10px solid white;
+      height: 385px;
+    }
+
+    @media(min-width: #{$screen-lg}) {
+      height: 485px;
+    }
+
+    img {
+      display: block;
+      max-width: 70%;
+      height: auto;
+      position: relative;
+      margin: 0 auto;
+      margin-top: 35px;
+      @media (min-width: #{$screen-sm}) {
+        max-width: none;
+        width: 170%;
+        left: -73%;
+        margin-top: 0;
+      }
+    }
+
+    span.label {
+      display: block;
+      bottom: 0;
+      width: 100%;
+      position: absolute;
+      @media (min-width: #{$screen-sm}) {
+        padding: 27px 20px;
+      }
+      &.hidden { display: none; }
+    }
+  }
+}
+
+section#profit {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $marketingBackgroundLightGray;
+
+  .box {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+    h1 { line-height: 0.4; }
+    h2 { margin-top: 15px; }
+    @media (min-width: #{$screen-lg}) {
+      text-align: left;
+      padding-top: 220px;
+      padding-left: 20px;
+      width: 420px;
+    }
+  }
+
+  img {
+    width: 100%;
+    margin-left: auto;
+    margin-top: 25px;
+    max-width: 500px;
+    @media (min-width: #{$screen-lg}) {
+      max-width: none;
+      width: 720px;
+      margin-top: 0;
+    }
+  }
+}
+
+section#custom {
+  text-align: center;
+  padding: 20px 0;
+  h1 {
+    line-height: 0.65;
+  }
+  h2, p { margin: 0; }
+  .span-block {
+    padding-top: 56px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .span-block.center {
+    width: 360px;
+    display: inline-block;
+    padding: 25px 20px 0 20px;
+    text-align: center;
+  }
+  .span-block {
+    &.left, &.right { display: none; }
+  }
+  .span-block.left {
+    border-right: 1px solid black;
+    width: 290px;
+    span {
+      width: 100%;
+      text-align: right;
+    }
+    span.borders {
+      text-align: center;
+    }
+    span.inline-left {
+      border-right: 1px solid black;
+    }
+  }
+  .span-block.right {
+    border-left: 1px solid black;
+    width: 290px;
+    span {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  .span-block span {
+    display: block;
+    padding: 18px 12px;
+    width: 170px;
+    color: black;
+    font-size: 1.3em;
+    &.inline {
+      display: inline-block;
+      width: 50%;
+    }
+    &.borders {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .bullets {
+    margin-top: 20px;
+    text-align: left;
+    font-family: $copyFont;
+    font-size: 1.4em;
+    ul { margin: 0 auto; }
+    @media (min-width: #{$screen-sm}) {
+      ul { max-width: 500px; }
+    }
+  }
+
+  @media (min-width: #{$screen-sm}) {
+    padding: 55px 0;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    .span-block.right { display: inline-block; }
+    .span-block.left { display: inline-block; }
+    .span-block.center {
+      height: 270px;
+    }
+    .bullets {
+      display: none;
+    }
+  }
+}
+
+section#getstarted {
+  background-color: $marketingBackgroundLightGray;
+  padding: 30px 0 70px 0;
+  h1 {
+    text-align: center;
+  }
+  form {
+    input, button { width: 100%; }
+    max-width: 650px;
+    margin: 0 auto;
+    input[type='email'] {
+      margin-bottom: 12px;
+      border: none;
+      font-family: $copyFont;
+      background-color: $inputBackgroundColor;
+      color: white;
+      padding: 18px;
+      @media (min-width: #{$screen-sm}) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  ul.footer-links{
+    list-style: none;
+    text-transform: uppercase;
+    li a{
+      color: #666;
+      font-size: 1em;
+    }
+    li.header{
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}

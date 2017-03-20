@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'BoutiqueScript';
+  src: font-url('BoutiqueScript.eot');
+  src: font-url('BoutiqueScript.eot?#iefix') format('embedded-opentype'),
+       font-url('BoutiqueScript.woff2') format('woff2'),
+       font-url('BoutiqueScript.woff') format('woff'),
+       font-url('BoutiqueScript.ttf') format('truetype'),
+       font-url('BoutiqueScript.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrimsonText-Roman';
+  src: font-url('CrimsonText-Roman.eot');
+  src: font-url('CrimsonText-Roman.eot?#iefix') format('embedded-opentype'),
+       font-url('CrimsonText-Roman.woff2') format('woff2'),
+       font-url('CrimsonText-Roman.woff') format('woff'),
+       font-url('CrimsonText-Roman.ttf') format('truetype'),
+       font-url('CrimsonText-Roman.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CrimsonText-Semibold';
+  src: font-url('CrimsonText-Semibold.eot');
+  src: font-url('CrimsonText-Semibold.eot?#iefix') format('embedded-opentype'),
+       font-url('CrimsonText-Semibold.woff2') format('woff2'),
+       font-url('CrimsonText-Semibold.woff') format('woff'),
+       font-url('CrimsonText-Semibold.ttf') format('truetype'),
+       font-url('CrimsonText-Semibold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$headerFont: 'BoutiqueScript', Times, serif !default;
+$subheaderFont: 'CrimsonText-Roman', Helvetica, Arial, sans-serif !default;
+$copyFont: 'CrimsonText-Roman', Helvetica, Arial, sans-serif !default;

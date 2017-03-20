@@ -1,0 +1,314 @@
+@import 'fonts';
+@import 'colors';
+
+@import './bootstrap_overrides';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+@import './pages/home';
+
+body {
+  margin: 0;
+  font-size: 12px;
+  &.modal-open {
+    overflow: hidden;
+  }
+  @media (min-width: #{$screen-sm}) {
+    font-size: 16px;
+  }
+}
+
+// Base font stuff
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: $headerFont;
+  font-weight: 100;
+  font-size: 5.8em;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h2, h3 {
+  font-family: $subheaderFont;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.85em;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+span, p, a, button {
+  font-family: $copyFont;
+}
+
+span.label {
+  font-family: $headerFont;
+  font-size: 3em;
+  background: $spanLabelBlue;
+  color: white;
+}
+
+// Buttons
+.btn-mm {
+  @include transition(all 0.2s ease-in-out);
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 18px 24px;
+  border-radius: 12px;
+  letter-spacing: 3px;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  border: none;
+  background-color: $tryItButtonBackgroundColor;
+  &:hover {
+    color: darken(white, 5%);
+    background-color: darken($tryItButtonBackgroundColor, 7%);
+    text-decoration: none;
+  }
+}
+
+// Navigation
+nav {
+  background-color: $marketingBackgroundLightGray;
+  padding-top: 34px;
+  padding-bottom: 20px;
+  text-align: center;
+  // hackkkkkkkkkkkkkkkkkkkkkk
+  &.marketing-pricing {
+    background-color: white;
+  }
+  img.logo {
+    display: inline-block;
+    padding: 0px 72px;
+  }
+  .span-block {
+    height: 116px;
+    padding-top: 38px;
+    display: inline-block;
+  }
+  .span-block.login {
+    border-right: 1px solid black;
+  }
+  .span-block.signup {
+    border-left: 1px solid black;
+  }
+  .span-block a {
+    display: block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 11px 0;
+    width: 170px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2px 30px;
+  color: white;
+  background-color: $footerBackgroundBlue;
+  h1 {
+    font-size: 2.5em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    @media (min-width: #{$screen-sm}) {
+      margin-left: 20px;
+      font-size: 1em;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+#thankyou-modal {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  h1, p { color: $lightblue; }
+  #circle-container {
+    display: none;
+    margin: 0 auto;
+    background: $darkblue;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    padding: 50px 0;
+    border-radius: 50%;
+    // vertical-align hack
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    @media (min-width: #{$screen-sm}) {
+      padding: 174px 0;
+      width: 500px;
+      height: 500px;
+    }
+  }
+  p {
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 0;
+    @media (min-width: #{$screen-sm}) {
+      margin-top: 40px;
+    }
+  }
+  #close {
+    position: absolute;
+    top: 14px;
+    left: 112px;
+    cursor: pointer;
+    @media (min-width: #{$screen-sm}) {
+      top: 60px;
+      left: 236px;
+    }
+  }
+}
+
+.marketing-faq-container, .marketing-privacy-container, .marketing-terms-container {
+  font-size: 16px;
+  max-width: 900px;
+  font-family: $copyFont;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+  padding: 0 100px;
+  padding-bottom: 32px;
+
+  h2{
+    padding: 0;
+    margin: 0;
+  }
+  h3{
+    font-family: $headerFont;
+    font-weight: 100;
+    font-size: 5.8em;
+    letter-spacing: 1px;
+    line-height: default;
+    margin: 0;
+    padding: 32px 0 0 0;
+    line-height: 0.5;
+  }
+  p.question{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+  p.answer{
+    margin: 0;
+    padding: 0;
+    a{
+      font-size: 1em;
+    }
+  }
+}
+.marketing-privacy-container, .marketing-terms-container{
+  text-align: left;
+}
+
+.sessions-new-container, .passwords-new-container, .passwords-edit-container, .passwords-update-container{
+  background-color: #008ded;
+  text-align: center;
+  padding-bottom: 120px;
+
+  h1{ color: #fff; }
+  a.nav-link{
+    text-transform: uppercase;
+    margin: 16px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-size: 16px;
+  }
+  input[type='email'], input[type='password']{
+    font-family: $copyFont;
+    color: #fff;
+    background-color: #008ded;
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 240px;
+    margin: 0 6px;
+  }
+  input[type='submit']{
+    font-family: $copyFont;
+    background-color: #fff;
+    color: #000;
+    padding: 12px;
+    width: 200px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 22px;
+  }
+  // The placeholder CSS classes before must be separate, otherwise browsers will ignore it
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    color: #fff;
+    letter-spacing: 2px;
+  }
+}
+.passwords-new-container{
+  input[type='email'], input[type='submit']{
+    width: 320px;
+  }
+}
+.body-sessions-new, .body-passwords-new, .body-passwords-edit, .body-passwords-update{
+  background-color: #008ded;
+
+  footer{
+    background-color: #008ded;
+    // position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}

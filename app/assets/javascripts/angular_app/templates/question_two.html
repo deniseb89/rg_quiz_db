@@ -1,0 +1,80 @@
+<div class='container'>
+
+  <div class='row'>
+    <div class='col-sm-12'>
+      <p><b>JS/Angular-1.x problems</b></p>
+    </div>
+
+    <div class='col-sm-12 panel'>
+      <div class='panel-body'>
+        <a ng-click='buttonOneClickHandler($event)' href='#' class='btn btn btn-success'>Click me #1</a>
+      </div>
+    </div>
+
+    <div class='col-sm-12 panel'>
+      <div class='panel-body'>
+        <button type='button' ng-click='buttonTwoClickHandler($event)' class='btn btn btn-success'>Click me #2</button>
+        <span>
+          In 30 years, you will be: <span ng-show='futureAge'>{{ futureAge }} years old</span>
+        </span>
+      </div>
+    </div>
+
+    <div class='col-sm-12 panel'>
+      <div class='panel-body'>
+        <div class='row'>
+          <div class='col-sm-4'>
+            <button type='button' ng-click='buttonThreeClickHandler($event)' class='btn btn btn-success'>Click me #3</button>
+          </div>
+
+          <div class='col-sm-4'>
+            <input type='text' ng-repeat='number in numbersToAdd' ng-model='number.value'>
+          </div>
+
+          <div class='col-sm-4'>
+            <span>sum: {{ sum }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='col-sm-12 panel'>
+      <div class='panel-body'>
+        <div class='panel-heading'>
+          <b>FizzBuzz!</b>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Fizz/Buzz/FizzBuzz?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat='number in fizzBuzzNumbers'>
+              <th>{{ number }}</th>
+              <td>{{ getFizzBuzzResult(number) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class='col-sm-12 panel'>
+      <div class='panel-body'>
+        <div class='panel-heading'>
+          <b>Question 5: Counter Goes Underneath Here!</b>
+          <!-- Count function start -->
+
+            <h1>0</h1>
+
+            <!-- If your implemention requires any additional markup, please add it here -->
+
+          <!-- Count function end -->
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
